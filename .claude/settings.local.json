@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -m py_compile memory_agent/memory_backends.py)",
+      "Bash(python -m py_compile memory_agent/memory_router.py)",
+      "Bash(python -m py_compile memory_agent/prompt_builder.py)",
+      "Bash(python -m py_compile memory_agent/context_manager.py)",
+      "Bash(python -m py_compile memory_agent/graph.py)",
+      "Bash(python -c ' *)",
+      "Bash(pip install *)",
+      "Bash(python -m benchmark.run_benchmark)",
+      "Bash(set PYTHONIOENCODING=utf-8)",
+      "Bash(rm -rf data/bench/mem_10)",
+      "Bash(python -c \"import sys; [print\\(l, end=''\\) for l in sys.stdin if not any\\(bad in l for bad in ['UnicodeEncodeError', 'charmap', 'Traceback', 'File', 'line ', 'cp1252']\\)]\")",
+      "Bash(rm -f tmp_result.txt)",
+      "Bash(rm -rf data/bench)"
+    ]
+  }
+}
